@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+label{
+    margin: 1rem 0;
+}
+body{
+    background-color: #F7ECDE !important; 
+}
+ h1{
+    position: relative;
+    padding: 1.2rem ;
+    font-family: "Pacifico", "cursive";
+    font-size: 3rem !important;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+
+}
+h1::before{
+    content: "";
+    position: absolute;
+    height: 25%;
+    width: 85%;
+  z-index: -1;
+  transition: height 350ms;
+  bottom: 20px;
+    background-color: #FEC260;
+
+}
+h1:hover::before{
+    height: 50%;
+}
+
+.heading{
+
+   background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color:  transparent;
+    margin-top: 1rem;
+}
+
+.bookmark-body{
+    border:  dotted #000;
+    border-width: 2px 0;
+}
+.error-box{
+    background-color: #000000a1;
+}
+.erorr{
+    width: 500px;
+}
+.circles span{
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.circles :nth-child(1){
+    background-color: #f15f5d;
+}
+.circles :nth-child(2){
+    background-color: #febe2e;;
+}
+.circles :nth-child(3){
+    background-color: #4db748;
+}

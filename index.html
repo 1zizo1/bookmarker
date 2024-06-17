@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="shortcut icon" href="bookmark.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="errorBox"
+        class="error-box d-none position-fixed vh-100 w-100 d-flex align-items-center justify-content-center">
+        <div class="erorr shadow bg-light border border-2 rounded-2  fs-6">
+            <div class="head d-flex justify-content-between p-2" >
+                <div class="circles d-flex">
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                </div>
+    
+                <button id="closeBtn" class="btn"> <i  class="fa-solid fa-x m-2 "></i>
+                </button>
+    
+            </div>
+<div class="error-body p-5 pt-3 pb-0">
+    <h5>Site Name or Url is not valid, Please follow the <br>rules below :
+    </h5>
+    <ul class="list-unstyled ps-1 mt-3">
+        <li > <i class="fa-regular fa-circle-right text-danger"></i> Site name must contain at least 3 characters
+        </li>
+        <li><i class="fa-regular fa-circle-right text-danger"></i>
+            Site URL must be a valid one
+        </li>
+    </ul>
+
+</div>
+        </div>
+    </div>
+
+    <div class="container d-flex flex-column">
+        <div class="d-flex justify-content-center">
+            <h1>Bookmarker</h1>
+        </div>
+
+
+        <div class="bookmark-body">
+            <h2 class="text-center  heading"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                    class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="col-md-12">
+                <label for="bookmarkName"> <i class="fa-solid fa-book-bookmark"></i> site name </label>
+                <input oninput="validateInput(this)" required type="text" id="bookmarkName" class="form-control "
+                    placeholder="Bookmark Name">
+            </div>
+            <div class="col-md-12">
+                <label for="URL"> <i class="fa fa-link"></i> site name </label>
+                <input type="url" id="URL" class="form-control" required placeholder="Site URL"
+                    oninput="validateInput(this)">
+
+            </div>
+            <div class="col-md-12 text-center p-3 ">
+                <button onclick="add()" class="btn btn-danger" id="addBtn" type="submit"> submit</button>
+                <button onclick="update()" id="updateBtn" class="btn btn-warning button d-none"> Update</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row m-2">
+                <div class="col-md-9">
+                    <input oninput="search()" type="text" id="searchInput" class="form-control" placeholder="Search">
+
+                </div>
+                <div class="col-md-3">
+                    <button onclick="search()" class="btn btn-warning"> search</button>
+                </div>
+
+            </div>
+            <table class="table">
+
+                <thead>
+                    <th class=" text-capitalize" scope="col"> Index</th>
+                    <th class=" text-capitalize" scope="col">Website Name</th>
+                    <th class=" text-capitalize" scope="col"> Visit</th>
+                    <th class=" text-capitalize" scope="col"> Delete</th>
+                    <th class=" text-capitalize" scope="col"> update</th>
+                </thead>
+                <tbody id="tableOfContent">
+
+                </tbody>
+            </table>
+        </div>
+        <a href="https://www.google.com/"></a>
+    </div>
+    <script src=" main.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+</body>
+
+</html>
